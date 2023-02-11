@@ -23,7 +23,7 @@ public class ViewController: BaseViewController {
     @IBOutlet weak var panNumberTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
 
-    var voltSDKInstance: Volt?
+    var voltSDKInstance: VoltSDKContainer?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ public class ViewController: BaseViewController {
             let partnerPlatform = partnerPlatformTextField.text ?? ""
 
             let voltInstance = VoltInstance(app_key: appKey, app_secret: appSecret, partner_platform: partnerPlatform, primary_color: primaryColor, secondary_color: secondaryColor, ref: ref)
-            voltSDKInstance = Volt(voltInstance: voltInstance)
+            voltSDKInstance = VoltSDKContainer(voltInstance: voltInstance)
             self.showAlert(message: "Instance Created.")
         } else {
             self.showAlert(message: "Please provide Platform")
@@ -68,7 +68,7 @@ public class ViewController: BaseViewController {
         let panNumber = panNumberTextField.text ?? ""
         let mobileNumber = mobileTextField.text ?? ""
 
-        Volt.precreateApplication(dob: dob, email: email, panNumber: panNumber, mobileNumber: Int(mobileNumber) ?? +9100000000) { [weak self] response in
+        VoltSDKContainer.preCreateApplication(dob: dob, email: email, panNumber: panNumber, mobileNumber: Int(mobileNumber) ?? +9100000000) { [weak self] response in
             self?.hideProgressBar()
             if response?.customerAccountId != nil {
                 self?.showAlert(message: "Application Created.")
