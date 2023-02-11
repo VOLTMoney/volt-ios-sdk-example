@@ -1,6 +1,6 @@
-# VoltMoney Android SDK - Example App.
+# VoltMoney iOS SDK - Example App.
 
-This repo contains a sample andriod app, which consumes the Volt Money andriod SDK (published over jitpack). This code can be used as a reference code to integrate Volt Money SDK in your andriod app.
+This repo contains a sample iOS app, which consumes the Volt Money iOS SDK (published over .framework file). This code can be used as a reference code to integrate Volt Money SDK in your iOS Native app.
 
 ## Contents
 * [Set up an environment](#set-up-an-environment)
@@ -8,23 +8,16 @@ This repo contains a sample andriod app, which consumes the Volt Money andriod S
 * [Pre-create customer application](#precreate-application)
 * [Init Volt Money Journey](#init-volt-money-journey)
 
-## 1. Set up an environment
+## 1. Set up an environment -- Need to discuss
 
-* Download Latest Android Studio and open this cloned repo as a new project.
-* This sdk is published on jitpack, follow below steps to get it in your project: 
+* Download Latest Xcode and open this cloned repo as a new project.
+* This sdk is published via .framework file, follow below steps to get it in your project: 
 
-Step 1. Add it in your root build.gradle at the end of repositories:
-```
-allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-```
+Step 1. :
+
 Step 2. Add the dependency for VOLT SDK. 
 ```
-implementation 'com.github.VOLTMoney:volt-android-sdk:1.0'
+
 
 ```
 
@@ -42,13 +35,15 @@ The first and mandatory step to integrate volt sdk is to create an instance of V
 VoltSDKContainer instance can be created as follows: 
 
   ```
-  var voltSDKContainer = VoltSDKContainer(contex,
-                "app_key",
-                "app_secret",
-                "partner_platform",
-                "primary_color",
-                "secondary_color",
-                "ref")
+  var voltSDKInstance: VoltSDKContainer?
+  let voltInstance = VoltInstance(app_key: appKey,
+  				app_secret: appSecret,
+				partner_platform: partnerPlatform,
+				primary_color: primaryColor,
+				secondary_color: secondaryColor,
+				ref: ref)
+  voltSDKInstance = Volt(voltInstance: voltInstance)
+  
   ```
  
 ## 3. Pre-create customer application (Optional) 
@@ -67,39 +62,17 @@ The api takes in the 4 customer details :
 
 ```
 // API to pre-create the application. 
-voltSDKContainer.startApplication(pan, mobile_number, email_address, date_of_birth);
-```
-
-The API will respond with standard http response statuses like 200 for success and 4xx for bad requests/auth failures etc. 
-
-* If you want to know the response of the create user api call, all you have to do is add the interface  `VoltAPIResponse` to calling activity and implement the `VoltAPIResponse`'s `preCreateAppAPIResponse()` method.
-```
-// Sample Implementation where we use preCreateAppResponse to create a toast based on API response. 
-
-override fun preCreateAppAPIResponse(preCreateAppResponse: PreCreateAppResponse?, errorMsg: String?) {
-
-        this.preCreateAppResponse =preCreateAppResponse
-        if (preCreateAppResponse?.customerAccountId !=null) {
-                Toast.makeText(
-                    this,
-                    "Customer Id is: "+this.createAppResponse?.customerAccountId.toString(),
-                    Toast.LENGTH_SHORT
-                ).show()
-        }else{
-            Toast.makeText(this, errorMsg, Toast.LENGTH_SHORT).show()
+VoltSDKContainer.preCreateApplication(dob: dob, email: email, panNumber: panNumber, mobileNumber: Int(mobileNumber)) { [weak self] response in
+            if response?.customerAccountId != nil {
+                self?.showAlert(message: "Application Created.")
+            } else {
+                self?.showAlert(message: response?.message ?? "")
+            }
         }
-    }
-```
-Here createAppResponse dataclass is : 
-```
-data class CreateAppResponse(
-    val customerAccountId: String?,
-    val customerCreditApplicationId: String?,
-    val message: String?,
-    val statusCode: String?,
-    val violations: String?
-)
-```
+	
+``` 
+customerAccountId: Indicate for success response
+response.message:  Provide specific message for issues
 
 
 ## 4. Init Volt Money Journey. 
@@ -112,7 +85,9 @@ The API takes one optional parameter as input :
 
 
 ```
-voltSDKContainer.initVoltSDK(mobileNumber)
+let controller = VoltHomeViewController(mobileNumber: "0000000000")
+ self.navigationController?.pushViewController(controller, animated: false)
+ 
 ```
  
 
