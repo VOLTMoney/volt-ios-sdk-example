@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zTH-Rc-5aE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8vh-bh-VRv">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,6 +9,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Web View Local View Controller-->
+        <scene sceneID="s0h-G3-rZW">
+            <objects>
+                <viewController id="8vh-bh-VRv" customClass="WebViewLocalViewController" customModule="VoltDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cSf-i8-6Qp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHQ-5S-gze">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JFo-IM-H23"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PHQ-5S-gze" firstAttribute="top" secondItem="JFo-IM-H23" secondAttribute="top" id="5V9-Dy-Uaq"/>
+                            <constraint firstItem="JFo-IM-H23" firstAttribute="trailing" secondItem="PHQ-5S-gze" secondAttribute="trailing" id="FDs-ux-EXC"/>
+                            <constraint firstItem="PHQ-5S-gze" firstAttribute="leading" secondItem="JFo-IM-H23" secondAttribute="leading" id="WST-OA-mp3"/>
+                            <constraint firstItem="JFo-IM-H23" firstAttribute="bottom" secondItem="PHQ-5S-gze" secondAttribute="bottom" id="bQq-SH-JLc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="voltWebView" destination="PHQ-5S-gze" id="dy2-ob-GBP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJA-xJ-HNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2776" y="4"/>
+        </scene>
         <!--VoltMoneySDK Sample-->
         <scene sceneID="BPm-GL-wE4">
             <objects>
@@ -128,7 +162,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000000000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v6a-jN-4ha">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8376023408" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v6a-jN-4ha">
                                                 <rect key="frame" x="170" y="470" width="206" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="ijp-dt-A9g"/>
@@ -149,7 +183,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AAAAAAAA" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UoY-X3-0lb">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AXUPM3563H" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UoY-X3-0lb">
                                                 <rect key="frame" x="170" y="523" width="206" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="t4K-qz-Dfq"/>
@@ -170,8 +204,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khb-xU-nOk">
-                                                <rect key="frame" x="44" y="252" width="305" height="48"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khb-xU-nOk">
+                                                <rect key="frame" x="44" y="219" width="305" height="48"/>
                                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="305" id="0yN-jh-MQg"/>
@@ -182,9 +216,6 @@
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="createVoltInstanceClick:" destination="gyT-8S-fD0" eventType="touchUpInside" id="vae-wV-bmE"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grR-IH-Q1j">
                                                 <rect key="frame" x="103.66666666666669" y="576" width="186" height="48"/>
@@ -272,7 +303,7 @@
                                             <constraint firstItem="cvg-PY-g6m" firstAttribute="top" secondItem="grR-IH-Q1j" secondAttribute="bottom" constant="25" id="Dpb-2D-Qkf"/>
                                             <constraint firstItem="KqE-g0-hsm" firstAttribute="leading" secondItem="hq0-98-Jdl" secondAttribute="trailing" constant="25" id="Fmi-8B-iec"/>
                                             <constraint firstAttribute="height" priority="750" constant="715" id="Fu1-9y-uPq"/>
-                                            <constraint firstItem="FOI-IU-1QW" firstAttribute="top" secondItem="Khb-xU-nOk" secondAttribute="bottom" constant="-51" id="HK8-Zy-ZK5"/>
+                                            <constraint firstItem="FOI-IU-1QW" firstAttribute="top" secondItem="Khb-xU-nOk" secondAttribute="bottom" constant="-18" id="HK8-Zy-ZK5"/>
                                             <constraint firstAttribute="trailing" secondItem="v6a-jN-4ha" secondAttribute="trailing" constant="17" id="Ioh-Qs-cjJ"/>
                                             <constraint firstItem="Jkm-sJ-jXx" firstAttribute="leading" secondItem="mxs-7F-bK2" secondAttribute="trailing" constant="34" id="J5d-5R-oBU"/>
                                             <constraint firstItem="mxs-7F-bK2" firstAttribute="top" secondItem="COd-Fc-NNK" secondAttribute="bottom" constant="18" id="MMJ-Uc-VND"/>
@@ -291,7 +322,7 @@
                                             <constraint firstItem="Fsg-Au-gjF" firstAttribute="top" secondItem="9FV-1x-uXQ" secondAttribute="bottom" constant="13" id="i6i-1Y-dcD"/>
                                             <constraint firstItem="0pt-Te-3KZ" firstAttribute="top" secondItem="DR4-7T-Uob" secondAttribute="bottom" constant="15" id="i7l-hz-dpV"/>
                                             <constraint firstAttribute="trailing" secondItem="Jkm-sJ-jXx" secondAttribute="trailing" constant="18" id="iIp-2Y-9IN"/>
-                                            <constraint firstItem="Khb-xU-nOk" firstAttribute="top" secondItem="GuN-vJ-ccI" secondAttribute="bottom" constant="54" id="iLx-Zx-Bsk"/>
+                                            <constraint firstItem="Khb-xU-nOk" firstAttribute="top" secondItem="GuN-vJ-ccI" secondAttribute="bottom" constant="21" id="iLx-Zx-Bsk"/>
                                             <constraint firstItem="DR4-7T-Uob" firstAttribute="top" secondItem="hq0-98-Jdl" secondAttribute="bottom" constant="22" id="iof-3e-9zM"/>
                                             <constraint firstItem="KbG-pp-mmh" firstAttribute="top" secondItem="mxs-7F-bK2" secondAttribute="bottom" constant="21" id="jaF-Bj-Q1Y"/>
                                             <constraint firstAttribute="trailing" secondItem="KqE-g0-hsm" secondAttribute="trailing" constant="15" id="lIF-Qm-VN8"/>
@@ -329,9 +360,7 @@
                             <constraint firstItem="fdd-Bn-sTS" firstAttribute="trailing" secondItem="UFw-nJ-hhk" secondAttribute="trailing" id="xRN-8M-CLu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="VoltMoneySDK Sample" id="o1d-ML-Y3j">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="nLN-5h-O8l"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="VoltMoneySDK Sample" id="o1d-ML-Y3j"/>
                     <connections>
                         <outlet property="dobTextField" destination="oce-P2-Fig" id="9ER-Us-pEV"/>
                         <outlet property="emailTextField" destination="Jkm-sJ-jXx" id="U8d-eV-OtP"/>
@@ -352,14 +381,12 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zTH-Rc-5aE" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nzl-zI-tkI">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jtz-4O-KPH">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
                         <segue destination="gyT-8S-fD0" kind="relationship" relationship="rootViewController" id="9PD-Ui-90f"/>
                     </connections>

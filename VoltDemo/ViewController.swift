@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import VoltFramework
+//import VoltFramework
 import WebKit
 
 public class ViewController: BaseViewController {
@@ -23,6 +23,11 @@ public class ViewController: BaseViewController {
     @IBOutlet weak var panNumberTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
 
+
+    let platform: String = "SDK_INVESTWELL"
+    let baseURL: String = "https://api.staging.voltmoney.in"
+    let webBaseURL: String = "https://app.staging.voltmoney.in"
+
     var voltSDKInstance: VoltSDKContainer?
 
     public override func viewDidLoad() {
@@ -31,60 +36,52 @@ public class ViewController: BaseViewController {
     }
 
     @IBAction func createAppClick(_ sender: UIButton) {
+        createVoltInstance()
         showProgressBar()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
             createApplication()
         }
     }
 
-    @IBAction func createVoltInstanceClick(_ sender: UIButton) {
-        createVoltInstance()
-    }
-
     @IBAction func invokeSDKClick(_ sender: UIButton) {
-        loadVoltSDK()
+        loadSDK()
     }
 
     func createVoltInstance() {
-        if partnerPlatformTextField.text?.count ?? 0 > 0 {
-            let appKey = "volt-sdk-staging@voltmoney.in"
-            let appSecret = "e10b6eaf2e334d1b955434e25fcfe2d8"
-            let ref = refTextField.text ?? ""
-            let primaryColor = primaryColorTextField.text ?? ""
-            let secondaryColor = secondaryColorTextField.text ?? ""
-            let partnerPlatform = partnerPlatformTextField.text ?? ""
+        let ref = refTextField.text ?? ""
+        let primaryColor = primaryColorTextField.text ?? ""
+        let secondaryColor = secondaryColorTextField.text ?? ""
+        let partnerPlatform = partnerPlatformTextField.text ?? ""
 
-            let voltInstance = VoltInstance(app_key: appKey, app_secret: appSecret, partner_platform: partnerPlatform, primary_color: primaryColor, secondary_color: secondaryColor, ref: ref)
-            voltSDKInstance = VoltSDKContainer(voltInstance: voltInstance)
-            self.showAlert(message: "Instance Created.")
-        } else {
-            self.showAlert(message: "Please provide Platform")
-        }
+//        let voltInstance = VoltInstance(appKey: Constant.appKey, appSecret: Constant.appSecret, partnerPlatform: partnerPlatform, primaryColor: primaryColor, secondaryColor: secondaryColor, ref: ref)
+//        voltSDKInstance = Volt(voltInstance: voltInstance)
     }
 
     func createApplication() {
+
         let dob = dobTextField.text ?? ""
         let email = emailTextField.text ?? ""
         let panNumber = panNumberTextField.text ?? ""
         let mobileNumber = mobileTextField.text ?? ""
 
-        VoltSDKContainer.preCreateApplication(dob: dob, email: email, panNumber: panNumber, mobileNumber: Int(mobileNumber) ?? +9100000000) { [weak self] response in
+        /*Volt.createApplication(dob: dob, email: email, panNumber: panNumber, mobileNumber: Int(mobileNumber) ?? +9100000000) { [weak self] response in
             self?.hideProgressBar()
             if response?.customerAccountId != nil {
                 self?.showAlert(message: "Application Created.")
             } else {
                 self?.showAlert(message: response?.message ?? "")
             }
-        }
+        }*/
     }
 
-    private func loadVoltSDK() {
-        if voltSDKInstance != nil {
-            let controller = VoltHomeViewController(mobileNumber: mobileTextField.text ?? "")
-            self.navigationController?.pushViewController(controller, animated: false)
-        } else {
-            self.showAlert(message: "Please create Volt Instance.")
-        }
+    private func loadSDK() {
+        //let mobileNumber = mobileTextField.text ?? ""
+
+        //let createUrl = CreateVoltInstanceURL(mobileNumber: mobileNumber)
+
+        //guard let url = Volt.createVoltSDKUrl() else { return }
+//        let controller = VoltHomeViewController()
+//        self.navigationController?.pushViewController(controller, animated: false)
     }
 
 }
