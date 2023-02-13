@@ -266,7 +266,6 @@ SWIFT_CLASS("_TtC13VoltFramework18BaseViewController")
 
 SWIFT_CLASS("_TtC13VoltFramework22VoltHomeViewController")
 @interface VoltHomeViewController : BaseViewController
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;

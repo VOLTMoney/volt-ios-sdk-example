@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		37FEB10FD050508AFF031C83 /* Pods_VoltDemo_VoltDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538792D7EC42E595D42057B2 /* Pods_VoltDemo_VoltDemoUITests.framework */; };
 		46ACEE7F5B45F9E25C51DC62 /* Pods_VoltDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8FB4AA741FE66A35001219 /* Pods_VoltDemoTests.framework */; };
-		6711C8C62997CA9400B68E78 /* VoltFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6711C8C52997CA9300B68E78 /* VoltFramework.framework */; };
-		6711C8C72997CA9400B68E78 /* VoltFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6711C8C52997CA9300B68E78 /* VoltFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67F1F751298D786A001B7B12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1F750298D786A001B7B12 /* AppDelegate.swift */; };
 		67F1F753298D786A001B7B12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1F752298D786A001B7B12 /* SceneDelegate.swift */; };
 		67F1F755298D786A001B7B12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1F754298D786A001B7B12 /* ViewController.swift */; };
@@ -21,6 +19,8 @@
 		67F1F772298D786D001B7B12 /* VoltDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1F771298D786D001B7B12 /* VoltDemoUITests.swift */; };
 		67F1F774298D786D001B7B12 /* VoltDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1F773298D786D001B7B12 /* VoltDemoUITestsLaunchTests.swift */; };
 		67F1F789298D8056001B7B12 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1F788298D8056001B7B12 /* BaseViewController.swift */; };
+		67F4AA34299A92B10072651D /* VoltFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F4AA33299A92B10072651D /* VoltFramework.framework */; };
+		67F4AA35299A92B10072651D /* VoltFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67F4AA33299A92B10072651D /* VoltFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BD89DE401F6525E5F84C06C8 /* Pods_VoltDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9ABA98A503716C937FEE32 /* Pods_VoltDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6711C8C72997CA9400B68E78 /* VoltFramework.framework in Embed Frameworks */,
+				67F4AA35299A92B10072651D /* VoltFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,7 +62,6 @@
 		538792D7EC42E595D42057B2 /* Pods_VoltDemo_VoltDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoltDemo_VoltDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55283010AF160D1C79526CDA /* Pods-VoltDemo-VoltDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoltDemo-VoltDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-VoltDemo-VoltDemoUITests/Pods-VoltDemo-VoltDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5A9ABA98A503716C937FEE32 /* Pods_VoltDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoltDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6711C8C52997CA9300B68E78 /* VoltFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VoltFramework.framework; sourceTree = "<group>"; };
 		67F1F74D298D786A001B7B12 /* VoltDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoltDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F1F750298D786A001B7B12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67F1F752298D786A001B7B12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		67F1F771298D786D001B7B12 /* VoltDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoltDemoUITests.swift; sourceTree = "<group>"; };
 		67F1F773298D786D001B7B12 /* VoltDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoltDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		67F1F788298D8056001B7B12 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		67F4AA33299A92B10072651D /* VoltFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VoltFramework.framework; sourceTree = "<group>"; };
 		C5F5324697A6290FB0691A0F /* Pods-VoltDemo-VoltDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoltDemo-VoltDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-VoltDemo-VoltDemoUITests/Pods-VoltDemo-VoltDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFA753250FA6BD577965B2F2 /* Pods-VoltDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoltDemo.release.xcconfig"; path = "Target Support Files/Pods-VoltDemo/Pods-VoltDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D422C1FBF4FE7F8F26A1FD7D /* Pods-VoltDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoltDemoTests.release.xcconfig"; path = "Target Support Files/Pods-VoltDemoTests/Pods-VoltDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6711C8C62997CA9400B68E78 /* VoltFramework.framework in Frameworks */,
+				67F4AA34299A92B10072651D /* VoltFramework.framework in Frameworks */,
 				BD89DE401F6525E5F84C06C8 /* Pods_VoltDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,7 +181,7 @@
 		67F1F795298E7856001B7B12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6711C8C52997CA9300B68E78 /* VoltFramework.framework */,
+				67F4AA33299A92B10072651D /* VoltFramework.framework */,
 				5A9ABA98A503716C937FEE32 /* Pods_VoltDemo.framework */,
 				538792D7EC42E595D42057B2 /* Pods_VoltDemo_VoltDemoUITests.framework */,
 				0F8FB4AA741FE66A35001219 /* Pods_VoltDemoTests.framework */,
