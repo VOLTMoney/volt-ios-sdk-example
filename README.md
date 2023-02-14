@@ -8,17 +8,35 @@ This repo contains a sample iOS app, which consumes the Volt Money iOS SDK (publ
 * [Pre-create customer application](#precreate-application)
 * [Init Volt Money Journey](#init-volt-money-journey)
 
-## 1. Set up an environment -- Need to discuss
+## 1. Set up an environment 
 
 * Download Latest Xcode and open this cloned repo as a new project.
-* This sdk is published via .framework file, follow below steps to get it in your project: 
+* This sdk is published via CocoaPods file, follow below steps to get it in your project: 
 
-Step 1. :
+Step 1. : Create pod init
+          Open pod file
 
 Step 2. Add the dependency for VOLT SDK. 
-```
+ Add pod 'VoltFramework'
+	  
+```  
+  target 'VoltDemo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
 
+  # Pods for VoltDemo
+  pod 'VoltFramework'
 
+  target 'VoltDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'VoltDemoUITests' do
+    # Pods for testing
+  end
+
+end
 ```
 
 ## 2. Create an instance of VoltSDK
@@ -85,7 +103,7 @@ The API takes one optional parameter as input :
 
 
 ```
-let controller = VoltHomeViewController(mobileNumber: "0000000000")
+let controller = VoltHomeViewController(mobileNumber: "")
  self.navigationController?.pushViewController(controller, animated: false)
  
 ```
