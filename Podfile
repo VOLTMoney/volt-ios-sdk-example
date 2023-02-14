@@ -7,6 +7,7 @@ target 'VoltDemo' do
 
   # Pods for VoltDemo
   pod 'IQKeyboardManagerSwift'
+  pod 'VoltFramework'
 
   target 'VoltDemoTests' do
     inherit! :search_paths

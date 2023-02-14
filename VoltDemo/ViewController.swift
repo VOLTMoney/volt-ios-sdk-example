@@ -85,7 +85,7 @@ public class ViewController: BaseViewController {
         let panNumber = panNumberTextField.text ?? ""
         let mobileNumber = mobileTextField.text ?? ""
 
-        VoltSDKContainer.preCreateApplication(dob: dob, email: email, panNumber: panNumber, mobileNumber: Int(mobileNumber) ?? +9100000000) { [weak self] response in
+        VoltSDKContainer.preCreateApplication(dob: dob, email: email, panNumber: panNumber, mobileNumber: Int(mobileNumber) ?? 0 ) { [weak self] response in
             self?.hideProgressBar()
             if response?.customerAccountId != nil {
                 self?.showAlert(message: "Application Created.")
@@ -98,8 +98,6 @@ public class ViewController: BaseViewController {
     private func loadVoltSDK() {
         if voltSDKInstance != nil {
             let controller = VoltHomeViewController(mobileNumber: mobileTextField.text ?? "")
-
-            navigationController?.title = "hjgjhgjhg"
             self.navigationController?.pushViewController(controller, animated: false)
         } else {
             self.showAlert(message: "Please create Volt Instance.")
