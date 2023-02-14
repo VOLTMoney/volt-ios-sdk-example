@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		uDWXi47yJin0BZClcKF2cr9/gC4=
+		</data>
 		<key>Headers/VoltFramework-Swift.h</key>
 		<data>
-		hfBmt66JLNlyCSXmmWLkG7tbhBI=
+		YxDmw77rLt8tMtaZNI+tySaWSaE=
 		</data>
 		<key>Headers/VoltFramework.h</key>
 		<data>
@@ -26,7 +30,7 @@
 		</data>
 		<key>Modules/VoltFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		st7gcf5lSTVf3UI4w0Xzv2NWshE=
+		8bF3Sblt6Nlyu3xnBqyCAItGQnI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -34,16 +38,23 @@
 		</data>
 		<key>VoltHomeViewController.nib</key>
 		<data>
-		qeepFoEflm2Ma+1/b7S10/pziwY=
+		0Gh4ZffUE72ujgZ4vTzKJn4KCIg=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DgiNdX1W6xPuBjqV62vj+r9HcQbFMpB9C6YipuML8ZU=
+			</data>
+		</dict>
 		<key>Headers/VoltFramework-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			B+Oab8W4pFhJSIhhOgHN54lfrjdLKyptjgCsKkJfViU=
+			27L1XqaT8cKeg4w1Caq1J+HJgw/2l0BzoV+zyjFO8BU=
 			</data>
 		</dict>
 		<key>Headers/VoltFramework.h</key>
@@ -71,7 +82,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Oj16hUm0p8dJjpC9JsWWpe0Bc4UIy5Cuy1x/N2OnQVA=
+			l0k1IO7pupw2d/BMVxM72J4Bxe0R9yY4CP/yCtksjuk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -85,7 +96,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zrzhNtM2mWhW3/TLGDliyoFnpJ40Tzm92hh4U5HHzxg=
+			SowFUaUSTVsyBvMNysPeszPBJ/4XoTyEUMeo4u7vpOE=
 			</data>
 		</dict>
 	</dict>
