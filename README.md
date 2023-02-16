@@ -43,18 +43,27 @@ end
 
 The first and mandatory step to integrate volt sdk is to create an instance of VoltSDKContainer class. The constructor to the class takes in configuration parameters which would be used while rendering content, these are: 
 
-1. **app_key (mandatory)**: Application's private key provided by the Volt Money team. If you don't have the key please contact the team at support@voltmoney.in. 
-2. **app_secret (mandatory)**: Application's private hash key provided by the Volt Money team. If you don't have the key please contact the team at support@voltmoney.in. 
-3. **partner_platform (mandatory)**: partner_platform, partner platform is the name/id provided to you by the Volt Money team to identify the SDK user. This is a mandatory field and will be passed as header in all API calls. If you don't have this 'id' please reach out to volt team @ support@voltmoney.in
-4. **primary_color(optional)** : Primary color, hex code of the color to be used as primary color for Volt Money sdk. The UI will get automatically customized to use this color as primary color (ex. all CTA, Icons etc.) 
-5. **secondary_color(optional)** : Secondary color, hex code of the color to be used as secondary color for Volt Money sdk. The UI will get automatically customized to use this color. ex. all svgs, progress bar etc.)
-6. **ref (optional)**: Ref, is short for referral code, referral code can be specific to partner/platform based on the use-case. If provided the user signing up would be associated with the partner/platform. 
+1. **voltEnv (optional)**: Application's provide the facility of providing environment either Staging or Production. Default is Staging. 
+2. **app_key (mandatory)**: Application's private key provided by the Volt Money team. If you don't have the key please contact the team at support@voltmoney.in. 
+3. **app_secret (mandatory)**: Application's private hash key provided by the Volt Money team. If you don't have the key please contact the team at support@voltmoney.in. 
+4. **partner_platform (mandatory)**: partner_platform, partner platform is the name/id provided to you by the Volt Money team to identify the SDK user. This is a mandatory field and will be passed as header in all API calls. If you don't have this 'id' please reach out to volt team @ support@voltmoney.in
+5. **primary_color(optional)** : Primary color, hex code of the color to be used as primary color for Volt Money sdk. The UI will get automatically customized to use this color as primary color (ex. all CTA, Icons etc.) 
+6. **secondary_color(optional)** : Secondary color, hex code of the color to be used as secondary color for Volt Money sdk. The UI will get automatically customized to use this color. ex. all svgs, progress bar etc.)
+7. **ref (optional)**: Ref, is short for referral code, referral code can be specific to partner/platform based on the use-case. If provided the user signing up would be associated with the partner/platform. 
 
 VoltSDKContainer instance can be created as follows: 
 
+Environment: Two types of environment
+
+public enum VOLTENV {
+    case STAGING
+    case PRODUCTION
+}
+
   ```
   var voltSDKInstance: VoltSDKContainer?
-  let voltInstance = VoltInstance(app_key: appKey,
+  let voltInstance = VoltInstance(voltEnv: .STAGING,
+  				app_key: appKey,
   				app_secret: appSecret,
 				partner_platform: partnerPlatform,
 				primary_color: primaryColor,
