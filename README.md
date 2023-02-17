@@ -110,11 +110,31 @@ The API takes one optional parameter as input :
 
 1. **Mobile Number** : Customer's mobile number. If passed it would autofill the mobile number in the mobile number text box on the login screen. 
 
+## 5. Integrate Framework class in Navigation stack --
+Navigation Header View will come only in Navigation stack in Push View Controller and it doesn't work in Present View Controller.
 
 ```
 let controller = VoltHomeViewController(mobileNumber: "")
  self.navigationController?.pushViewController(controller, animated: false)
  
 ```
+Note: If previous screen navigation color change then, we have to write below code --
+
+public override func viewWillAppear(_ animated: Bool) {
+        navigatioColor()
+    }
+
+    private func navigatioColor() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .white
+
+        let titleAttribute = [NSAttributedString.Key.font:  UIFont.systemFont(ofSize: 18, weight: .bold), NSAttributedString.Key.foregroundColor: UIColor.black]
+        appearance.titleTextAttributes = titleAttribute
+
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+    }
+
  
 
