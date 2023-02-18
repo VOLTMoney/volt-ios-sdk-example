@@ -17,7 +17,7 @@ Step 1. : Create pod init
           Open pod file
 
 Step 2. Add the dependency for VOLT SDK. 
- Add pod 'VoltFramework'
+ Add pod 'VoltFramework', '1.0.3'
 	  
 ```  
   target 'VoltDemo' do
