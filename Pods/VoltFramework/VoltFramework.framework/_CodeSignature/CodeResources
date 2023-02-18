@@ -8,9 +8,29 @@
 		<data>
 		/JJJYlubn4nAgm/asoyCgH8wgT0=
 		</data>
-		<key>Headers/VoltFramework-Swift.h</key>
+		<key>Assets.xcassets/Contents.json</key>
 		<data>
-		YxDmw77rLt8tMtaZNI+tySaWSaE=
+		OsxTSdeF0zGUdTl13dMC26vX4YM=
+		</data>
+		<key>Assets.xcassets/back.imageset/Contents.json</key>
+		<data>
+		z+joQspZlrPrNDdSlGOvlbxD+6c=
+		</data>
+		<key>Assets.xcassets/back.imageset/arrow_back.png</key>
+		<data>
+		kdh4c6RZtquK3d3wy/cPrWvylBA=
+		</data>
+		<key>Assets.xcassets/back.imageset/arrow_back@2x.png</key>
+		<data>
+		bc32pRe9NmIWbdoBkY2ceTdtsZc=
+		</data>
+		<key>Assets.xcassets/back.imageset/arrow_back@3x.png</key>
+		<data>
+		Go1LD/ZfCj5bHonbt0e0rL3rADc=
+		</data>
+		<key>Assets.xcassets/primaryColor.colorset/Contents.json</key>
+		<data>
+		uZNYz6/0cGYENrOzunAztgXmzts=
 		</data>
 		<key>Headers/VoltFramework.h</key>
 		<data>
@@ -18,7 +38,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		WjTYKa5/LA00Z3TqWsJkPXRHsgU=
+		3qXCvX/fr+nbe5SJNMm5yz19xYQ=
 		</data>
 		<key>Modules/VoltFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -30,11 +50,11 @@
 		</data>
 		<key>Modules/VoltFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		8bF3Sblt6Nlyu3xnBqyCAItGQnI=
+		N9ldrkmhjNNg0LNY7wNTHq0N3Z4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		S8qRFlX/RFvBpx400uQOOOnLsjs=
+		tyajICbB/5Fwja5kCekk9gOhW8s=
 		</data>
 		<key>VoltHomeViewController.nib</key>
 		<data>
@@ -50,11 +70,46 @@
 			9stPdcLXbF7ODjj80mR10ObHhfdtMynIMnN0Ul9W4OI=
 			</data>
 		</dict>
-		<key>Headers/VoltFramework-Swift.h</key>
+		<key>Assets.xcassets/Contents.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			27L1XqaT8cKeg4w1Caq1J+HJgw/2l0BzoV+zyjFO8BU=
+			D9Sbo8NYXHCWeOAEaoIcPGBoXscGNyDTDTo0SL46IIs=
+			</data>
+		</dict>
+		<key>Assets.xcassets/back.imageset/Contents.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			k+jjws4RLhSbWJeQPXdJYvn2VkW46ZEO3NXKjpPzTb8=
+			</data>
+		</dict>
+		<key>Assets.xcassets/back.imageset/arrow_back.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Mr3BN7mko5wSpR0T7nVg51z79iMZYH+YwmHBrDmZ9FQ=
+			</data>
+		</dict>
+		<key>Assets.xcassets/back.imageset/arrow_back@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			m0sqKOw/bKcg6zfOgPhwfDH7qkqmqhRts1ghjtErCPk=
+			</data>
+		</dict>
+		<key>Assets.xcassets/back.imageset/arrow_back@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oZCuCOUkoOJ0HSNPH7QUpzUx/Nt7pgBTTPWpitYme9I=
+			</data>
+		</dict>
+		<key>Assets.xcassets/primaryColor.colorset/Contents.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1d4IWs5cBYCF2ASAS87NbHgfNwZ9w8aS+KrbWgZ9Bs0=
 			</data>
 		</dict>
 		<key>Headers/VoltFramework.h</key>
@@ -82,14 +137,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			l0k1IO7pupw2d/BMVxM72J4Bxe0R9yY4CP/yCtksjuk=
+			l6FGQn2Ne+SFdGSGJ3FHKt5WFIM77iST7OluJWUIG8k=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9c+08k0FOJDEaKmtKJuQC7nnpj+i0tp3Lmvyn7id5Yw=
+			i7m2eVnapJpfTT/0YvhjXcusIJ1Loc5k6tTmC+qd0F8=
 			</data>
 		</dict>
 		<key>VoltHomeViewController.nib</key>

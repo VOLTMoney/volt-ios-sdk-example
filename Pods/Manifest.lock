@@ -1,10 +1,10 @@
 PODS:
   - IQKeyboardManagerSwift (6.5.11)
-  - VoltFramework (1.0.1)
+  - VoltFramework (1.0.3)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
-  - VoltFramework
+  - VoltFramework (= 1.0.3)
 
 SPEC REPOS:
   trunk:
@@ -13,8 +13,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
-  VoltFramework: 7a616a9bcc3a6fb190847266a7d4264f1b2817ae
+  VoltFramework: 248fc76a9f44462f061ccc922f56826197df0202
 
-PODFILE CHECKSUM: 18b70f80ac1a147502f170c9fac8ef99e1058a3d
+PODFILE CHECKSUM: b2a1ecd1fc0579c409082d7cf0389984e7e5bc89
 
 COCOAPODS: 1.11.3

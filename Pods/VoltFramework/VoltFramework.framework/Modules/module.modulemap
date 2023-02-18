@@ -4,8 +4,3 @@ framework module VoltFramework {
   export *
   module * { export * }
 }
-
-module VoltFramework.Swift {
-  header "VoltFramework-Swift.h"
-  requires objc
-}
