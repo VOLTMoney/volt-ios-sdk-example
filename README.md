@@ -49,7 +49,7 @@ The first and mandatory step to integrate volt sdk is to create an instance of V
 4. **partner_platform (mandatory)**: partner_platform, partner platform is the name/id provided to you by the Volt Money team to identify the SDK user. This is a mandatory field and will be passed as header in all API calls. If you don't have this 'id' please reach out to volt team @ integration-support@voltmoney.in.
 5. **primary_color(optional)** : Primary color, hex code of the color to be used as primary color for Volt Money sdk. The UI will get automatically customized to use this color as primary color (ex. all CTA, Icons etc.) 
 6. **secondary_color(optional)** : Secondary color, hex code of the color to be used as secondary color for Volt Money sdk. The UI will get automatically customized to use this color. ex. all svgs, progress bar etc.)
-7. **ref (optional)**: Ref, is short for referral code, referral code can be specific to partner/platform based on the use-case. If provided the user signing up would be associated with the partner/platform. 
+7. **ref (optional)**: this is the partner (advisor) code, when passed the user/customer will get associated to this partner. To understand how to generate volt partner code, please refer to this documnenation : https://volt-docs.readme.io/reference/createpartneraccountusingpost_1. To read more about volt's partner program please refer to this : https://voltmoney.in/partner
 
 VoltSDKContainer instance can be created as follows: 
 
